@@ -1,0 +1,251 @@
+/*.ul_nav 产品介绍*/
+
+	#product{width:900px;margin:18px auto;}
+
+
+
+	/*.ul_nav*/
+	.inner_contain .ul_nav{background: #0099cc;height:36px;}
+	.inner_contain .ul_nav li{float:left;font-size: 16px;height:36px; line-height: 36px; color:#fff;padding:0 43px;position:relative;}
+	.inner_contain .ul_nav li.inner_contain_current{background:#006699; }
+	.inner_contain .ul_nav li i{position: absolute;left:50%;margin-left:-8px;top: 100%;width:17px; height: 4px;background: url(../images/product/li_down.jpg) no-repeat center center;}
+
+
+	/*.ul_contain*/
+	.inner_contain .ul_contain{padding:14px 14px 0 14px; border: 1px solid #0099cc; border-top:none;height:320px;font-size: 14px;background-color: #fff;}
+
+
+	/*.ul_contain_introduce产品介绍*/
+	.introduce{}
+	.introduce .what{display:inline-block;width:149px;height:24px;line-height:24px;background:#0099cc url(../images/product/what_down.jpg) no-repeat 140px center;color:#fff;padding-left:8px;margin-top:32px;margin-bottom: 10px;}
+	.dashed{border-bottom:1px dashed #cccccc;}
+	.introduce .answer{line-height: 22px;margin-bottom:30px;}
+
+	/*.ul_contain_cost交易细节*/
+	.cost{display:none;}
+	.cost table{font-size: 14px;margin-top:20px;}
+	.cost td{align:center;valign:center; text-align: center;border:1px solid #000;vertical-align: middle;}
+	.font_weight{font-weight: bold;}
+	.width01{width:300px;}
+
+	/*.ul_contain_compare产品对比*/
+	.compare{display:none;}
+	.compare table{border: 1px solid #8393a7;margin-top:25px;}
+	.tr01{color:#fff;background:#9ca9ba;border-bottom: 3px solid #8393a7; font-size: 16px;}
+	.compare table tr{height:46px;border:1px dashed #8393a7;background:#e7ecf3;}
+	.compare table td{border:1px dashed #8393a7;vertical-align: middle;line-height:18px;text-align: center;}
+	.compare table td.de_bg{background:#9ca9ba;}
+	.compare td.special_oil_01{background:#0095e4;color:#ffff00;font-size: 22px;width:120px;position: relative;left:0;top:0;border-left: 1px solid #e7ecf3;border-right: 1px solid #e7ecf3;}
+	.compare .special_oil_01 img{width:138px!important;position: absolute; left:-3px;top:-30px;}
+	.compare .special_oil_02{background:#fff;color:#d70000;border-left: 1px solid #e7ecf3;border-right: 1px solid #e7ecf3;}
+	.compare .special_oil_03{box-shadow: 1px 0px 0px #ccc inset;}
+	.compare .special_oil_04{box-shadow: -1px 0px 0px #ccc inset;}
+
+	/*.ul_contain_strength产品优势*/
+	.strength{padding:50px 0 0 55px;display: none;}
+	.strength .imgs{height:151px;}
+	.strength .imgs  img{width:auto!important;margin-right:24px;cursor: pointer;vertical-align:top;}
+	.strength .words{width:740px;height:35px;line-height:35px;color:#fff;margin-left:10px;font-size: 18px;}
+	.strength .words .p1{background:#239cc7; padding-left:20px;}
+	.strength .words .p2{background:#26c1a1; padding-left:50px;display: none;}
+	.strength .words .p3{background:#ef5e89;font-size: 16px; padding-left:30px;display: none;}
+	.strength .words .p4{background:#f0845d; padding-left:170px;display: none;}
+	.strength .words .p5{background:#d9cf49; padding-left:200px;display: none;}
+	.strength .words .p6{background:#798ae4; padding-left:450px;display: none;}
+
+	/*.ul_contain_safe资金安全*/
+	.safe{display: none;}
+	.safe .safe_head{width:830px;height:35px;line-height: 35px;background:url(../images/product/head_bg03.jpg) no-repeat center center;margin:20px 0 12px 12px;} 
+	.safe .safe_head .bigword{margin-left:308px;font-size: 24px;line-height: 27px;color:#0087cf;}
+	.safe .safe_ad img{width:auto!important;margin-left:12px;margin-top:20px;}
+
+	/*.ul_contain_mode*//*Ó¯ÀûÄ£Ê½*/
+	.mode{width:660px;height:auto;margin:auto;margin-top:35px;display: none;}
+	.mode img{width:auto!important;} 
+
+
+
+
+/*金牌策略*/
+.jinpaicelv{background:#fff;}
+.inner_jinpaicelv{border:1px solid #80bbdc;width:547px;height:265px;margin:15px;padding:18px 15px 8px;}
+.inner_jinpaicelv .li{height:37px;margin-bottom:13px;width:550px;}
+.inner_jinpaicelv .li .left_jinpaicelv{float:left;*zoom:1;width:105px;height:37px;line-height:37px;font-size: 14px;text-align: center;color:#fff;background: url(../images/li01.png) no-repeat left center;border-radius:3px;}
+.inner_jinpaicelv .li .right_jinpaicelv{float:left;*zoom:1;height:37px;line-height:37px;font-size: 14px;text-align: left;color:#006699;padding-left:15px;background: #d0e6f6;width:430px;border-top-right-radius:3px;border-bottom-right-radius:3px;}
+
+.li_last{display: table;height:55px;overflow: hidden;}
+.inner_jinpaicelv li .li_more{display: table-cell;vertical-align: middle;font-size: 14px;text-align: center;color:#fff;background: url(../images/li02.png) no-repeat left center;border-radius:3px;width:105px;}
+.inner_jinpaicelv li .strategy_reason{display: table-cell;vertical-align: middle;font-size: 14px;text-align: left;color:#006699;padding:0 5px 0 15px ;background: #d0e6f6;width:430px;border-top-right-radius:3px;border-bottom-right-radius:3px;width:425px;line-height:18px;}
+
+.jinpaicelv_p{ position: absolute;left:417px;top:297px;font-size: 14px;padding:0 10px;background: #fff;color:#006699;}
+
+
+/*课程表*/
+#kechengbiao{width:900px;height:auto;background:#fff;border-radius:5px;}
+.kecheng{width:857px;height:560px;background:#2ea7ff;margin:20px auto;}
+.biaoti img{margin:10px auto;display:block;padding:5px 0;*padding:5px 0;}
+.biaoge{width:830px;margin:0px auto;position:relative;left:0;top:0;background:url(../images/class/829.png) no-repeat center center; height:410px;}
+.kecheng1{position:absolute;top:35px;margin:0 auto;left:0;}
+.ke td{border:1px solid #6babdd}
+
+
+/*名师秘籍*/
+.value_book{width:820px;height:480px;background: #fff url(../images/nav_value_book/book_bg.jpg) no-repeat center bottom;border-radius:5px;}
+.value_book li{height:30px;}
+.value_book li.differ{height:45px;line-height: 45px; font-size: 18px;background: #dff4ff;}
+.value_book li.differ .span_left{margin-left:130px;}
+.value_book li.differ .span_right{margin-right:150px;}
+.value_book li.differ a{display: inline-block;height:24px;line-height:24px;width:92px;border-radius:2px;border:1px solid #1a74a4;color:#1a74a4;font-size:12px; text-align:center}
+.value_book li.differ a:hover{background: #1b74a4;color:#fff;}
+
+/*名师秘籍 弹出框*/
+.book_access{background:#444543;width:410px;height:280px;border-radius:5px; text-align: center;}
+.book_access_top{border-bottom: 1px solid #555154;padding:16px 0;}
+.book_access_word{color:#fff;font-size: 12px;height: 49px;line-height: 49px;}
+.book_access_text{width:282px;height:29px;background: url(../images/nav_value_book/book_input_bg.jpg) no-repeat center center;margin-bottom: 12px;border-radius:5px;padding:5px 10px;font-size: 14px;}
+
+/*名师秘籍*/
+.power_access{background:#444543;width:410px;height:280px;border-radius:5px; text-align: center;}
+.power_access_top{border-bottom: 1px solid #555154;padding:16px 0;}
+.power_access_choose{color:#fff;font-size: 14px;height: 49px;line-height: 49px;text-align: center;}
+.power_access_choose p{display: inline-block;}
+.power_access_choose input[type=radio]{vertical-align:middle; margin-top:-2px; margin-bottom:1px;}
+.power_access_text{width:282px;height:29px;line-height:29px;background: url(../images/nav_value_book/book_input_bg.jpg) no-repeat center center;margin-bottom: 12px;border-radius:5px;padding:5px 10px;font-size: 14px; color:#999;}
+
+
+/*登陆*/
+#login_form{width:321px;background:#fff;overflow-y: auto;margin: 0 auto;*width:329px;}
+.zidongdenglu{margin-top:20px;font-size:16px;color:#a5a5a5;}
+.xuan{width:24px;height:24px;margin-right:10px;margin-top:20px;}
+.ErrBox {
+background: url("/images/login_error.png") no-repeat scroll 5px center transparent;
+border: 1px solid #BF2531;
+color: #BF2531;
+display: none;
+font-size: 12px;
+padding: 2px 5px 2px 27px; margin-bottom:5px;
+}
+
+.lh{line-height: 24px;}
+.bg01{background: url(../images/touxiang.jpg) no-repeat left center;padding-left:47px;height:49px;display: inline-block;width:227px;}
+.bg02{background: url(../images/mima.jpg) no-repeat left center;padding-left:47px;height:49px;display: inline-block;width:227px;}
+
+
+/*注册*/
+#register_form{width:321px;height:495px;background:#fff;overflow-y: auto;margin:0 auto;*width:329px;}
+.content{padding:40px 20px }
+.zhanghao input{height:49px;line-height:49px;width:220px;color:#136a97;font-size:16px;border:none;background:url(../images/touxiangbg.jpg);padding:0 5px;}
+.mima input{width:255px;height:49px;line-height:49px;background:url(../images/touxiangbg.jpg);margin-top:20px;color:#b1b1b1;font-size:16px;padding:0 10px;}
+.shouji input{width:255px;height:49px;line-height:49px;background:url(../images/touxiangbg.jpg);margin-top:20px;color:#136a97;font-size:16px;padding:0 10px;}
+.shoujihao{position:relative;}
+.cuowu{position:absolute;right:10px;top:230px;}
+.yanzheng_fl{margin-top:20px;overflow: hidden;}
+.yanzheng_fl input{width:125px;height:49px;line-height:49px;background:url(../images/touxiangbg.jpg);color:#136a97;padding:0 10px;font-size:16px;}
+.yanzheng_fr{width:125px;height:49px;margin-top:20px;margin-left:10px;}
+.form_submit{width:288px;height:60px; background: url(../images/lijidenglu.png);margin-top:20px;}
+.form_register{width:288px;height:60px; background: url(../images/lijizhuce.png);margin-top:20px;}
+
+
+/*公司简介*/
+#company{height:580px;overflow-y:auto;margin:10px 0;}
+
+
+/*专家团队*/
+#experts{height:580px;width:910px;margin:10px 0px 10px 10px;}
+.inner_experts{height:580px;overflow-y: auto;}
+.inner_experts li{width:880px;height:170px;border:1px solid #ccc;margin:auto;margin-top: 11px;}
+.inner_experts li p{width:645px;line-height: 28px;color:#666;font-size: 14px;display: inline-block;}
+.li_l{float: left;padding:10px 30px;}
+.li_r{float: left;width:660px;padding-top:20px;}
+
+/*名师榜*/
+#staff{width:800px;padding:20px;height:550px;}
+.staff_head{height:50px;position: relative;left:0;top:0;text-align: center;}
+.staff_head_h{height:50px;line-height:50px;background: url(../images/staff/tbg.gif) no-repeat center top;font-size: 36px;font-weight: bold;color:#ff0;}
+.staff_head_a{position: absolute;left:665px;top:32px;}
+
+.staff_order{border:2px solid #B20000;border-radius: 5px;height:495px;}
+.staff_order_inner{height: auto;}
+.staff_order_outer{margin:10px; height:470px;overflow-y:auto;width:780px;}
+.staff_order_li01{overflow: hidden;margin-bottom:15px;}
+
+.staff_order_li_name{float:left;width:570px;}
+.staff_order_li_name p{margin-bottom:5px;}
+.staff_order_li_name_p01{font-size: 18px;height:35px;line-height: 35px;color:#333;}
+.staff_order_li_name_p01_span01{float:left;}
+.staff_order_li_name_p01 .staff_order_li_name_p01_span02{float:right;color:#B20000;margin-right:10px;}
+.staff_order_li_name_p02{height:28px;background: #eee;width:570px;text-align: left;}
+.staff_order_li_name_p03{height: 28px;line-height: 28px;font-size: 14px;color:#666;}
+.staff_order_li_name_p03 span{margin-right:25px;}
+.staff_order_li_name_p02_span{display: inline-block;width:27px;height:28px;background-color: #B20000;}
+.staff_order_li01_img{float:right;width:140px;height:100px;background:url(../images/staff/vote.gif) no-repeat center center;}
+.staff_order_li01_img:hover{background:url(../images/staff/voon.gif) no-repeat center center;}
+
+.clear{clear:both;}
+
+
+#support{width:240px;height:140px;padding:20px 30px;background: #fff;position: relative;left:0;top:0;box-shadow: 1px 10px 10px green;}
+.support_word{font-size: 16px;color:#333;height:90px;line-height: 45px;text-indent: 1em;}
+.support_button a{display: inline-block;width:50px;height: 30px;color:#fff;line-height: 30px;text-align: center;}
+.support_button .botton01{background-color: #a00;margin:0 26px;}
+.support_button .botton02{background-color: #0a0;margin:0 40px;}
+
+.support_close{position: absolute;right:0;top:0;}
+/*财经日历*/
+#notes{}
+
+
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+    width: 8px;
+    height:8px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 2px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(153,153,153,0.4);
+    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.8);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

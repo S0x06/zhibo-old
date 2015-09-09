@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+	Options +FollowSymlinks
+	RewriteEngine On
+
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+
+	RewriteCond $1 !^(admin_hm)
+	RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+
+
+	#图片防盗链设置
+	#RewriteCond %{HTTP_REFERER} !^$ [NC]
+	#RewriteCond %{HTTP_REFERER} !zhibo.gdyy99.com [NC]
+	#RewriteCond %{HTTP_REFERER} !baidu.com [NC]
+	#RewriteCond %{HTTP_REFERER} !sogou.com [NC]
+	#RewriteCond %{HTTP_REFERER} !soso.com [NC]
+	#RewriteCond %{HTTP_REFERER} !haosou.com [NC]
+	#RewriteCond %{HTTP_REFERER} !google.com [NC]
+	#RewriteCond %{HTTP_REFERER} !google.com.hk [NC]
+	#RewriteRule .(png|jpg|gif)$ /no.gif [R,NC,L]
+
+</IfModule>

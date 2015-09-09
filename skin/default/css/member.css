@@ -1,0 +1,105 @@
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	list-style:none;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* a  in the markup */
+a{text-decoration: none; cursor:pointer;}
+a:link,a:visited ,a:hover,a:active{ text-decoration: none; }
+
+/* a  in the markup */
+button, input, select, textarea{border:0; resize: none;}
+
+
+/* 以上是reset*/
+body{font-family: "Microsoft YaHei";}
+
+/*head*/
+.head{width:100%;height:104px;background: url(../images/member/bg.jpg) no-repeat center center;line-height: 104px;}
+.inner_head{width:995px;margin:0 auto;color:#fff;height:104px;}
+.head_left{float: left;height:104px;}
+.hl_we{font-size: 32px;line-height: 104px;}
+.hl_xt{font-size: 16px;width:224px;height:19px;line-height: 19px;text-align: center;border:1px solid #fff;padding:8px;margin-left:10px;}	
+.head_right{float: right;height:104px;}
+.hr_hi{background: url(../images/member/people.png) no-repeat left center;padding-left:20px;display:inline-block;width:140px;float: left;}
+.hr_btn{color:#fff;font-size: 16px;float: left;height:104px;}
+
+/*down*/
+.down{width:995px;margin:0 auto;height:440px;}
+
+.d_nav{width:155px;font-size: 0;height:240px;float:left;}
+.d_nav li{height:60px;}
+.d_nav li a{color:#fff;display: inline-block;height:60px;line-height:60px;background-color: #007cb2;font-size: 14px;padding-left: 60px;width:95px;}
+.d_nav li a.current{border-top:1px solid #fff;background-color:#006794;border-bottom:1px solid #005a82;height:58px;line-height: 58px;}
+.d_nav li a:hover{border-top:1px solid #fff;background-color:#006794;border-bottom:1px solid #005a82;height:58px;line-height: 58px;}
+.home{background: url(../images/member/home.png) no-repeat 30px center;}
+.my{background: url(../images/member/1.png) no-repeat 30px center;}
+.name{background: url(../images/member/qun.png) no-repeat 30px center;}
+.password{background: url(../images/member/bi.png) no-repeat 30px center;}
+
+
+.d_section{float: left;padding:5px 6px;width:825px;}
+
+.ds_head{height:40px;line-height: 40px;box-shadow:0px 0px 2px #e5dfdf;border:1px solid #e5dfdf;}
+.block{width:5px;height:40px;background-color: #007cb2;display: inline-block;float:left;}
+.ds_head a{display: inline-block;height: 40px;line-height: 40px;float:left;padding:0 10px;font-size: 12px;color:#007cb2;}
+.ds_head .a_current{font-weight: bold;}
+
+.ds_contain{padding:40px;box-shadow:0px 0px 2px #e5dfdf;border:1px solid #e5dfdf;color:#989898;font-size: 12px;margin-top:10px;}
+
+.dsc_head{;border-bottom:1px solid #a0a0a0;height:25px;font-weight: bold;font-size: 14px;}
+.ds_contain p{padding:13px 0;}
+.ds_contain input{display: inline-block;width:140px;height:26px;padding-left:10px;}
+.ds_contain .span01{padding-left:65px;line-height: 26px;display: inline-block;height:26px;}
+.inenr_dsc{padding-top:20px;}
+
+.span_c1{padding-left:15px;}
+.span_c2{padding-left:12px;}

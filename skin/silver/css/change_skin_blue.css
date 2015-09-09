@@ -1,0 +1,6 @@
+html,body{background: url('../images/skin_change_blue/body_bg_blue.jpg') repeat;background-size: cover;}
+.logo{background: url(../images/skin_change_blue/logo_blue.png) no-repeat center bottom;}
+.video_head{background-color: #0e477c;}
+.logi_middle_line{background:url(../images/skin_change_blue/btn_ge_blue.jpg) no-repeat center center;}
+.chat_room_head{  border-bottom: 1px solid #7dccf3;}
+.foot{background:#1c5e99;color: #c9e6ff;}
