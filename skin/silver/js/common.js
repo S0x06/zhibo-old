@@ -116,11 +116,11 @@ $('.video_active').mouseout(function(){
 	tiner_this = setTimeout(timer_active_banner,3000)
 });
 
-	$('.send_img').hover(function(){
+	/*$('.send_img').hover(function(){
 		$(this).attr('src',base.tpl+'images/send.png');
 	},function(){
 		$(this).attr('src',base.tpl+'images/send_hover.png');
-	});
+	});*/
 
 //微信看看浮标
 var weixin_timer =null;

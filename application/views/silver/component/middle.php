@@ -148,7 +148,9 @@ $(function (){
 	get_msg_data();
 	change_color($.cookie('color') || COLOR);
 })
-
+/*
+* 轮询获取聊天信息
+* */
 function get_msg_data(){
 	var score = arguments[0] ? arguments[0] : STARTTIME;
 	$.ajax({
@@ -183,16 +185,21 @@ function deal_data(data_list){
     
 	srcolldown();
 }
-
+/*
+* 前台发送聊天记录
+* */
 function send_msg(){
+    $('.send_img').attr('src',base.tpl+'images/send.png');
+    setTimeout(function(){$('.send_img').attr('src',base.tpl+'images/send_hover.png');}, 500);
+    //自己发送的信息就直接显示，不需要判断
 	var msg = $('#msg_content').html();
 	if(msg == '') return;
 	var date = new Date();
 	var html = '<li><p><img src="images/level/level'+GID+'.png"></p><div class="outer_chatroom"><span>'+USERNAME+'&nbsp['+date.Format("yyyy-MM-dd hh:mm:ss")+']</span><div class="chat_room_log_word chat_data_'+GID+'">'+msg+'</div></div></li>';
 	$('#msg_list').append(html);
 	srcolldown();
-
-	$.post(base.url+'chat/send_msg',{content:msg, rid:RID},function (){})
+    //后台处理聊天信息
+	$.post(base.url+'chat/send_msg',{content:msg, rid:RID},function (){});
 	$('#msg_content').focus().html('');
 
 	var chat_room_log_contain_width = $('.chat_room_log_contain').width();

@@ -88,6 +88,7 @@ $(function (){
 })
 
 function get_chat_data(){
+    //如果函数没有参数，默认0
 	var score = arguments[0] ? arguments[0] : 0;
 	$.ajax({
 		url : admin.url+'examine/get_chat_data',
@@ -97,10 +98,11 @@ function get_chat_data(){
 		timeout : 20000,
 		data : {score : score},
 		success : function (result){
-			get_chat_data(result.score)
+			get_chat_data(result.score);
 			deal_data(result.data_list);
 		},
 		error : function (XMLHttpRequest, textStatus){
+            //没有获取到数据，如果超时就调用自身
 			if(textStatus == 'timeout') get_chat_data(score);
 			else setTimeout(get_chat_data(score), 3000);
 		}
@@ -137,8 +139,8 @@ function del(id,rid){
 
 function bath_del(){
 	var examine = $('input[name^=examine]:checked');
-	var ids = new Array();;
-	var rids = new Array();;
+	var ids = new Array();
+	var rids = new Array();
 	var len = examine.length;
 	for(var i = 0; i < len; i++){
 		ids.push($(examine[i]).val());
@@ -150,6 +152,9 @@ function bath_del(){
 	function (){})
 }
 
+/*
+* 发布未审核记录
+* */
 function release(id,rid){
 	$.post(admin.url+'examine/release',
 	{id:id,rid:rid},
@@ -160,8 +165,8 @@ function release(id,rid){
 
 function batch_release(){
 	var examine = $('input[name^=examine]:checked');
-	var ids = new Array();;
-	var rids = new Array();;
+	var ids = new Array();
+	var rids = new Array();
 	var len = examine.length;
 	for(var i = 0; i < len; i++){
 		ids.push($(examine[i]).val());
@@ -177,7 +182,7 @@ function ip_ban(name){
 	if(confirm('确认屏蔽该用户IP?')){
 		$.post(admin.url+'examine/ip_ban',
 		{name:name},
-		function (){
+		function (res){
 			alert('屏蔽成功');
 		})
 	}

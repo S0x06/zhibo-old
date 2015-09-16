@@ -41,6 +41,7 @@ class room extends MY_Controller {
 		$this->db->cache_on();
 		$room_list = $this->db->query("select id,pwd from {$this->db->dbprefix('room')}")->result_array();
 		$this->db->cache_off();
+        //默认001号房间，无密码
 		if(!$rid) $rid = $room_list[0]['id'];
 
 		/*查看输入的房间ID是否存在 ，并且是否需要密码进入房间*/
@@ -208,30 +209,38 @@ class room extends MY_Controller {
 		if( ! $this->session->userdata('name'))
 		{
 			/*只有当session不存在的时候，才会设置信息*/
+            //是否登陆
 			$this->session->set_userdata('is_login', 0);
+            //房间号
 			$this->session->set_userdata('rid', $rid);
             //引入字符串辅助函数,下面调用random_string
 			$this->load->helper('string');
 			$flag = $this->is_mobile ? 'm' : 'p';
+            //游客姓名
 			$this->session->set_userdata('name', '游客'.$flag.random_string('alnum', 5));
+            //所属组，1为游客
 			$this->session->set_userdata('gid', 1);
+            //获取ip
 			$this->session->set_userdata('ip', $ip);
 		}
 
 		/*无论是会员还是游客，都要向数据库中更新数据*/
 		if($this->session->userdata('is_login'))
 		{
+            //如果是会员，就更新会员表
 			$this->db->update('member', array('login_time' => date("Y-m-d H:i:s"), 'ip' => $ip), array('id' => $this->session->userdata('mid')));
 		}
 		else
 		{
+            //如果是游客
 			$tb_visitor = $this->db->dbprefix('visitor');
+            //获取游客姓名
 			$name = $this->session->userdata('name');
             //查询visitor表中是否存在此游客的名字
 			$visitor_id = $this->db->query("select id from {$tb_visitor} where name = '{$name}' limit 1");
 			if($visitor_id->num_rows() == 0)
 			{
-                //不存在就插入
+                //不存在就插入name和ip
 				$this->db->insert($tb_visitor, array('name' => $name, 'ip' => $ip));
                 //游客表中的id就等于会员id
 				$mid = $this->db->insert_id();
@@ -239,7 +248,7 @@ class room extends MY_Controller {
 			}
 			else
 			{
-                //存在就更新对应id的ip
+                //存在就更新对应name的ip
 				$visitor_id = $visitor_id->row()->id;
 				$this->db->update($tb_visitor, array('ip' => $ip), array('id' => $visitor_id));
 			}

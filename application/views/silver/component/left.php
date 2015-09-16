@@ -21,7 +21,7 @@
 		<div class="news">
 			<div class="news_head">
 				<span class="news_head_left">最新会员消息</span>
-				<span class="news_head_middle"><span class="news_head_middle_special"></span><span>在线</span></span></span>
+				<span class="news_head_middle"><span class="news_head_middle_special"></span><span>人在线</span></span></span>
 			</div>	
 			<div class="outer_news_ul">
 				<ul class="news_ul">
@@ -65,7 +65,7 @@ function get_online_num(){
 		min = 1500;
 	}
 	var num = parseInt(Math.random()*(max-min+1)+min,10);
-	$('.news_head_middle_special').html(num+' 人');
+	$('.news_head_middle_special').html(num+' ');
 }
 get_online_num();
 setInterval(get_online_num, 60000);

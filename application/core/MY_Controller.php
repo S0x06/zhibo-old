@@ -12,7 +12,9 @@ class MY_Controller extends CI_Controller {
 		parent::__construct();
 		$this->load->database();
 		$ip = self::get_ip();
-		if($this->db->query("select count(1) as num from {$this->db->dbprefix('ipban')} where ip='{$ip}' limit 1")->row()->num > 0)
+        $name = $this->session->userdata('name');
+        $ipban_num = $this->db->query("select count(1) as num from {$this->db->dbprefix('ipban')} where ip='{$ip}' OR ip='{$name}' limit 1")->row()->num;
+		if($ipban_num > 0)
 		{
 			show_404();
 			exit;

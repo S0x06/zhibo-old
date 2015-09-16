@@ -83,6 +83,11 @@ class examine extends MY_Controller {
 			$rid = $rids[$k];
 			$score = $ids[$k];
 			$rid = str_replace("'", '', $rid);
+            /*第一个参数表示有序集
+             *第二个参数表示最小值
+             *第三个参数表示最大值
+             * 列出介于最小值和最大值之间的成员，有序成员按score值递增
+             * */
 			$record = $this->redis->zrangebyscore('examine_record_'.$rid, $score, $score);
 			if( ! empty($record) )
 			{
@@ -94,6 +99,10 @@ class examine extends MY_Controller {
 				$sql_data[] = $sql_record;
 				if( ! isset($room[$rid]) ) $room[$rid] = array();
 				$room[$rid][$score] = $record;
+                /*
+                 * ZREMRANGEBYSCORE key min max
+                 *移除有序集key中，所有score值介于min和max之间(包括等于min或max)的成员。自版本2.1.6开始，score值等于min或max的成员也可以不包括在内，
+                 * */
 				/*内容已取出，从未审核中删掉这条数据*/
 				$this->redis->zremrangebyscore('examine_record_'.$rid, $score, $score);
 			}
@@ -110,6 +119,10 @@ class examine extends MY_Controller {
 				$sv = json_decode($sv, TRUE);
 				$sv['time'] = date("Y-m-d H:i:s");
 				$sv = json_encode($sv);
+                /*
+                 * ZADD key score member [[score member] [score member] ...]
+                 *将一个或多个member元素及其score值加入到有序集key当中
+                 * */
 				$this->redis->zadd('room_'.$k, str_pad(str_replace('.', '', microtime(true)),14,0), $sv);
 			}
 		}
@@ -155,7 +168,7 @@ class examine extends MY_Controller {
 		}
 		exit();
 	}
-
+    //屏蔽ip
 	function ip_ban()
 	{
 		$name = $this->input->post('name');
@@ -163,23 +176,29 @@ class examine extends MY_Controller {
 		$ip = $this->db->query("select ip from {$this->db->dbprefix('visitor')} where name='{$name}' limit 1");
 		if($ip->num_rows() > 0)
 		{
+            //获取游客用户的ip,但是不一定能获取到ip
 			$ip = $ip->row()->ip;
 		}
 		else
 		{
+            //获取会员用户的ip，也不一定能获取到
 			$ip = $this->db->query("select ip from {$this->db->dbprefix('member')} where name='{$name}' limit 1");
 			if($ip->num_rows() > 0)
 			{
 				$ip = $ip->row()->ip;
 			}
 		}
-		if($ip != '')
+        //如果获取到的ip为空
+		if(json_encode($ip) == '')
 		{
-			if($this->db->query("select count(1) as num from {$this->db->dbprefix('ipban')} where ip='{$ip}' limit 1")->row()->num == 0)
-			{
-				$this->db->insert('ipban', array('ip' => $ip));
-			}
+            $ip = $name;
 		}
+        //且屏蔽ip的表中没有次ip
+        if($this->db->query("select count(1) as num from {$this->db->dbprefix('ipban')} where ip='{$ip}' limit 1")->row()->num == 0)
+        {
+            //就插入表
+            $this->db->insert('ipban', array('ip' => $ip));
+        }
 	}
 
 	function send_member_notice()
