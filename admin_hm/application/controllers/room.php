@@ -82,6 +82,7 @@ class room extends MY_Controller {
 			'pwd' => $this->input->post('pwd'),
 			'tpl' => $this->input->post('tpl'),
 			'qq' => $this->input->post('qq'),
+			'phone' => $this->input->post('phone'),
 			'qq_code' => $this->input->post('qq_code'),
 			'statistics' => $this->input->post('statistics'),
 			'auto_examine' => $this->input->post('auto_examine'));

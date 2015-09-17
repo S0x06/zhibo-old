@@ -39,7 +39,7 @@ var RID = <?php echo '"'.$rid.'"'; ?>;
 <section class="video">
 	<header class="video_head">
 		<div class="logo"></div>
-		<div class="head_tel"><a href="tel:021-51301950">咨询电话:021-51301950</a></div>
+		<div class="head_tel"><a href="tel:<?php echo $room['phone']; ?>">咨询电话:<!--021-51301950--><?php echo $room['phone']; ?></a></div>
 	</header>
 	<div class="video_inner">
 		<?php echo str_replace('{name}', $this->session->userdata('name'), $room['video']); ?>

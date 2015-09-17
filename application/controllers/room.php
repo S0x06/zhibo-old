@@ -184,7 +184,7 @@ class room extends MY_Controller {
 
 		/*房间相关信息*/
 		$this->db->cache_on();
-		$this->out_data['room'] = $this->db->query("select title,keywords,description,video,statistics,qq,qq_code from {$this->db->dbprefix('room')} where id='{$rid}' limit 1")->row_array();
+		$this->out_data['room'] = $this->db->query("select title,keywords,description,video,statistics,qq,qq_code,phone from {$this->db->dbprefix('room')} where id='{$rid}' limit 1")->row_array();
 		$this->db->cache_off();
 
 		$this->out_data['rid'] = $rid;

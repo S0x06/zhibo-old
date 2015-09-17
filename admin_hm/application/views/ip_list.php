@@ -89,7 +89,7 @@ var jso;
 function ip_search(){
     var name = $('input[name=name]').val();
     $.post(admin.url+'ip/ip_search',{name:name},function (res){
-        console.log(res);
+        //console.log(res);
         if(res == '[]')
         {
             return;
@@ -104,7 +104,7 @@ function ip_search(){
             }
             $('.mytan tbody').html("<tr class='success'><td>"+name+"</td> <td>"+jso[i].ip+"</td> </tr>");
         }
-        console.log(j[0].ip);
+        //console.log(j[0].ip);
         $('.mytan').modal('show');
     })
 }

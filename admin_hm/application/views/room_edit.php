@@ -92,6 +92,12 @@
 							<input class="form-control" name="qq" id="qq" value="<?php echo my_echo($room_info['qq']) ?>">
 						</div>
 					</div>
+                    <div class="form-group">
+                        <label for="phone" class="col-sm-2 control-label">客服电话号</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="phone" id="phone" value="<?php echo my_echo($room_info['phone']) ?>">
+                        </div>
+                    </div>
 					<div class="form-group">
 						<label for="qq_code" class="col-sm-2 control-label">客服QQ代码</label>
 						<div class="col-sm-10">

@@ -2,7 +2,7 @@
 	<div class="inner_chatroom">
 		<div class="chat_room">
 			<div class="chat_room_head">
-				<p>24小时免费客服热线：<span>021-51301950</span></p> 
+				<p>24小时免费客服热线：<span><!--021-51301950--><?php echo $room['phone']; ?></span></p>
 			</div>
 			<div class="chat_room_log">
 				<ul class="chat_room_log_contain" id="msg_list">
